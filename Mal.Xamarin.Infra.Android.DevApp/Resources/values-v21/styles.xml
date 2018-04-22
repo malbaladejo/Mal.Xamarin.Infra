@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!--<style name="TextAppearance.AppCompat.Button.Custom">
+    <item name="android:textColor">@color/white</item>
+  </style>-->
+  
+  <!-- Inherit from the light Material Theme -->
+  <style name="Theme.Material.Light.ColoredBar" parent="android:Theme.Material.Light">
+    <!-- Override the app bar color -->
+    <!--<item name="android:colorPrimary">@color/blue_500</item>
+    --><!-- Override the app statusbar color --><!--
+    <item name="android:colorPrimaryDark">@color/blue_600</item>
+    --><!-- Override the color of UI controls --><!--
+    <item name="android:colorAccent">@color/blue_600</item>
+    --><!-- Override the color of UI text in the app bar --><!--
+    <item name="android:textColorPrimary">@color/white</item>
+
+    <item name="android:textColor">@color/black</item>
+
+    --><!-- Override the background buton color --><!--
+    <item name="android:colorButtonNormal">@color/blue_600</item>-->
+    <!--<item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom</item>-->
+  </style>
+  
+</resources>
