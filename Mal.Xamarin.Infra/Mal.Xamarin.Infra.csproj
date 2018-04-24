@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LightInject" Version="5.1.2" />
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1" />
     <PackageReference Include="Unity" Version="5.8.6" />
   </ItemGroup>

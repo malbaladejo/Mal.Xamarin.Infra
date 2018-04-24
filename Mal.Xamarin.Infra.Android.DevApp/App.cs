@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Runtime;
+using Mal.Xamarin.Infra.Android.Containers;
 using Mal.Xamarin.Infra.DevApp;
 using Mal.Xamarin.Infra.DevApp.ViewModels;
 using System;
@@ -25,7 +26,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 
         private void Initialize()
         {
-            new AppBootstrapper().Run();
+            var bootstrapper = new AndroidAppBootstrapper();
+            var container = bootstrapper.Run(new AppBootstrapperStrategy());
 
             this.RegisterActivities();
         }
