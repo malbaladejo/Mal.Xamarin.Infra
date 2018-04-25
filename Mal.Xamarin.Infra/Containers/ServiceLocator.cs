@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Mal.Xamarin.Infra.Containers
 {
-    internal class ServiceLocator : IServiceLocator
+    public class ServiceLocator : IServiceLocator
     {
         private readonly IContainer container;
 
@@ -33,5 +33,7 @@ namespace Mal.Xamarin.Infra.Containers
 
         public object GetService(Type serviceType)
         => this.container.GetInstance(serviceType);
+
+        public static IServiceLocator Current { get; internal set; }
     }
 }

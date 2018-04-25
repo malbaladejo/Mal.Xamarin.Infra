@@ -40,6 +40,9 @@ namespace Mal.Xamarin.Infra.Containers
         public void RegisterSingleton<TFrom, TTo>() where TTo : TFrom
         => this.container.Register<TFrom, TTo>(new PerContainerLifetime());
 
+        public void RegisterType<TType>()
+            => this.container.Register<TType>();
+
         public void RegisterType<TFrom, TTo>() where TTo : TFrom
         => this.container.Register<TFrom, TTo>();
 

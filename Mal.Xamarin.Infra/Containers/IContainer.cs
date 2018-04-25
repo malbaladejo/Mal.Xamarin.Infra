@@ -10,6 +10,7 @@ namespace Mal.Xamarin.Infra.Containers
 
         void RegisterType<TFrom, TTo>() where TTo : TFrom;
         void RegisterType<TFrom, TTo>(string key) where TTo : TFrom;
+        void RegisterType<TType>();
         void RegisterSingleton<TFrom, TTo>() where TTo : TFrom;
         void RegisterInstance<TType>(TType instance);
 
