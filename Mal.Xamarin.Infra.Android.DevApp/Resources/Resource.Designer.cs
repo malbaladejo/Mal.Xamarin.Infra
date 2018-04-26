@@ -26,6 +26,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 		
 		public static void UpdateIdValues()
 		{
+			global::Mal.Xamarin.Infra.Android.Resource.Id.progressBar = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Id.progressBar;
+			global::Mal.Xamarin.Infra.Android.Resource.Layout.ListViewBusyIndicatorFooter = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Layout.ListViewBusyIndicatorFooter;
 		}
 		
 		public partial class Attribute
@@ -78,17 +80,26 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070002
-			public const int icon = 2131165186;
-			
-			// aapt resource value: 0x7f070003
-			public const int listButton = 2131165187;
-			
-			// aapt resource value: 0x7f070001
-			public const int myButton = 2131165185;
+			// aapt resource value: 0x7f070005
+			public const int icon = 2131165189;
 			
 			// aapt resource value: 0x7f070000
-			public const int textView1 = 2131165184;
+			public const int items = 2131165184;
+			
+			// aapt resource value: 0x7f070006
+			public const int listButton = 2131165190;
+			
+			// aapt resource value: 0x7f070003
+			public const int myButton = 2131165187;
+			
+			// aapt resource value: 0x7f070002
+			public const int progressBar = 2131165186;
+			
+			// aapt resource value: 0x7f070004
+			public const int textView1 = 2131165188;
+			
+			// aapt resource value: 0x7f070001
+			public const int title = 2131165185;
 			
 			static Id()
 			{
@@ -107,7 +118,13 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			public const int List = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int ListItemTemplate = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int ListViewBusyIndicatorFooter = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Main = 2130903043;
 			
 			static Layout()
 			{
