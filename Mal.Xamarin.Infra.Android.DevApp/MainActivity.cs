@@ -25,7 +25,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp
             this.SetBinding(() => this.DataContext.Icon, () => this.Icon.Text);
         }
 
-        public TextView Icon => this.View<TextView>(Resource.Id.icon);
-        public Button ListButton => this.View<Button>(Resource.Id.listButton);
+        public TextView Icon => this.GetView<TextView>(Resource.Id.icon);
+        public Button ListButton => this.GetView<Button>(Resource.Id.listButton);
     }
 }

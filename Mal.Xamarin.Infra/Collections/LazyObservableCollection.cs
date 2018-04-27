@@ -33,30 +33,23 @@ namespace Mal.XF.Infra.Collections
             }
         }
 
-        public Task LoadItemsAsync(object item = null)
+        public async Task LoadItemsAsync(object item = null)
+        {
+            await Task.Delay(0);
+            if (this.IsBusy)
+                return;
+
+            await this.LoadItemsByIndexAsync(this.GetIndex((T)item));
+        }
+
+        public async Task LoadItemsByIndexAsync(int index)
         {
             if (this.IsBusy)
                 return;
 
-            var pageNumber = this.GetPageNumber((T)item);
-            return this.LoadItemsByPageAsync(pageNumber);
-        }
+            var pageNumber = this.GetPageNumberByIndex(index);
 
-		public async Task LoadItemsByIndexAsync(int index)
-		{
-			if (this.IsBusy)
-                return;
-			
-			var pageNumber = this.GetPageNumberByIndex(index);
-            return this.LoadItemsByPageAsync(pageNumber);
-		}
-		
-		private async Task LoadItemsByPageAsync(int pageNumber)
-		{
-			if (this.IsBusy)
-                return;
-			
-			if (pageNumber < this.lastLoadedPage)
+            if (pageNumber < this.lastLoadedPage)
                 return;
 
             this.IsBusy = true;
@@ -71,24 +64,19 @@ namespace Mal.XF.Infra.Collections
             {
                 this.IsBusy = false;
             }
-		}
-		
-        private int GetPageNumber(T item)
-        {
-            if (item == null)
-                return 0;
-			
-            return this.GetPageNumberByIndex(this.GetIndex(item));
         }
 
-		private int GetPageNumberByIndex(int index)
+        private int GetPageNumberByIndex(int index)
         {
             var pageNumber = index / this.pageSize;
             return pageNumber;
         }
-		
+
         private int GetIndex(T item)
         {
+            if (item == null)
+                return 0;
+
             for (int i = lastIndex; i < this.Count; i++)
             {
                 if (this[i].Equals(item))

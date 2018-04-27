@@ -55,7 +55,7 @@ namespace Mal.Xamarin.Infra.Android
 
         protected NavigationService NavigationService { get; private set; }
 
-        protected TView View<TView>(int id) where TView : View
+        protected TView GetView<TView>(int id) where TView : View
         {
             if (!this.views.ContainsKey(id))
                 this.views[id] = this.FindViewById<TView>(id);

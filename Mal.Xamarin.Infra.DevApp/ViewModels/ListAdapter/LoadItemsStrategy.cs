@@ -8,7 +8,7 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
     {
         public async Task<IReadOnlyCollection<ListViewItem>> LoadItemsAsync(int pageNumber, int pageSize)
         {
-            await Task.Delay(2000);
+            await Task.Delay(500);
             var items = new List<ListViewItem>();
 
             if (pageNumber >= 5)

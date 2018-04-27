@@ -6,6 +6,7 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
     public class ListViewModel : ViewModelBase
     {
         private readonly ILoadItemsStrategy<ListViewItem> loadItemsStrategy;
+        private ListViewItem selectedItem;
 
         public ListViewModel()
         {
@@ -14,5 +15,11 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
         }
 
         public LazyObservableCollection<ListViewItem> Items { get; }
+
+        public ListViewItem SelectedItem
+        {
+            get { return this.selectedItem; }
+            set { this.Set(ref this.selectedItem, value); }
+        }
     }
 }

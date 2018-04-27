@@ -60,7 +60,7 @@
     <Compile Include="Containers\AndroidAppBootstrapper.cs" />
     <Compile Include="Containers\AndroidContainerExtensions.cs" />
     <Compile Include="Fonts\IconFontHelper.cs" />
-    <Compile Include="ListViewAdapter.cs" />
+    <Compile Include="Adapters\ListViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IconTextView.cs" />
