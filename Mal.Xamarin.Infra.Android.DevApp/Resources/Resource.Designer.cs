@@ -90,7 +90,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			public const int list_items = 2131165184;
 			
 			// aapt resource value: 0x7f070001
-			public const int listviewtemplate_index = 2131165185;
+			public const int listviewtemplate_check = 2131165185;
 			
 			// aapt resource value: 0x7f070002
 			public const int listviewtemplate_title = 2131165186;

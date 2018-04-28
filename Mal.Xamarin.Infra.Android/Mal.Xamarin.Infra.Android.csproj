@@ -59,6 +59,7 @@
     <Compile Include="ApplicationBase.cs" />
     <Compile Include="Containers\AndroidAppBootstrapper.cs" />
     <Compile Include="Containers\AndroidContainerExtensions.cs" />
+    <Compile Include="Converters\BoolToViewStatesConverter.cs" />
     <Compile Include="Fonts\IconFontHelper.cs" />
     <Compile Include="Adapters\ListViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

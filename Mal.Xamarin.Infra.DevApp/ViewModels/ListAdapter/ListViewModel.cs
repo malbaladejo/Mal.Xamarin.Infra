@@ -7,6 +7,7 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
     {
         private readonly ILoadItemsStrategy<ListViewItem> loadItemsStrategy;
         private ListViewItem selectedItem;
+        private bool multiSelectionEnabled;
 
         public ListViewModel()
         {
@@ -20,6 +21,21 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
         {
             get { return this.selectedItem; }
             set { this.Set(ref this.selectedItem, value); }
+        }
+
+        public bool MultiSelectionEnabled
+        {
+            get { return this.multiSelectionEnabled; }
+            set
+            {
+                this.Set(ref this.multiSelectionEnabled, value);
+
+                if (this.MultiSelectionEnabled)
+                    return;
+
+                foreach (var item in this.Items)
+                    item.IsSelected = false;
+            }
         }
     }
 }
