@@ -1,7 +1,8 @@
 ﻿using Mal.Xamarin.Infra.Android.Containers;
+using Mal.Xamarin.Infra.Android.DevApp.LazyList;
 using Mal.Xamarin.Infra.Containers;
 using Mal.Xamarin.Infra.DevApp;
-using Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter;
+using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 using Mal.Xamarin.Infra.DevApp.ViewModels.Main;
 
 namespace Mal.Xamarin.Infra.Android.DevApp
@@ -12,7 +13,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
         {
             base.RegisterTypes(container);
             container.RegisterViewForNavigation<MainActivity, MainNavigationToken>();
-            container.RegisterViewForNavigation<ListActivity, ListNavigationToken>();
+            container.RegisterViewForNavigation<LazyListActivity, LazyListNavigationToken>();
+            container.RegisterViewForNavigation<ItemDetailActivity, LazyListItemNavigationToken>();
         }
     }
 }

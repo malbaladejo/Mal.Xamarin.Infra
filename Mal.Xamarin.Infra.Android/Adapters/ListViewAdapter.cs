@@ -17,13 +17,20 @@ namespace Mal.Xamarin.Infra.Android
 
         private ListViewAdapter(ListView list, LazyObservableCollection<T> lazyObservableCollection, Func<T, View> getView, LayoutInflater layoutInflater)
         {
-            this.list = list;
-            this.lazyObservableCollection = lazyObservableCollection;
-            this.getView = getView;
-            this.footerView = layoutInflater.Inflate(Resource.Layout.ListViewBusyIndicatorFooter, null);
-            list.Adapter = this.lazyObservableCollection.GetAdapter(this.GetAdapter);
+            try
+            {
+                this.list = list;
+                this.lazyObservableCollection = lazyObservableCollection;
+                this.getView = getView;
+                this.footerView = layoutInflater.Inflate(Resource.Layout.ListViewBusyIndicatorFooter, null);
+                list.Adapter = this.lazyObservableCollection.GetAdapter(this.GetAdapter);
 
-            this.InitializeCollection(this.lazyObservableCollection);
+                this.InitializeCollection(this.lazyObservableCollection);
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
 
         public static ListViewAdapter<T> Build(ListView list, LazyObservableCollection<T> lazyObservableCollection, Func<T, View> getView, LayoutInflater layoutInflater)

@@ -1,15 +1,15 @@
 ﻿using GalaSoft.MvvmLight;
 
-namespace Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter
+namespace Mal.Xamarin.Infra.DevApp.ViewModels.LazyList
 {
-    public class ListViewItem : ViewModelBase
+    public class LazyListItemViewModel : ViewModelBase
     {
         private string title;
         private bool isSelected;
 
         public int Index { get; }
 
-        public ListViewItem(int index)
+        public LazyListItemViewModel(int index)
         {
             this.Index = index;
             this.Title = $"Item {this.Index}";

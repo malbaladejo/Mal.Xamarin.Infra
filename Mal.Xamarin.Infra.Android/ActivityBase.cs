@@ -48,7 +48,8 @@ namespace Mal.Xamarin.Infra.Android
 
         protected virtual void OnNavigatedTo(INavigationToken token)
         {
-            // Nothing to do
+            // ReSharper disable once SuspiciousTypeConversion.Global
+            (this.DataContext as INavigationAware)?.OnNavigatedTo(token);
         }
 
         protected TViewModel DataContext { get; private set; }

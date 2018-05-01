@@ -67,7 +67,8 @@
   <ItemGroup>
     <Compile Include="AndroidAppBootstrapperStrategy.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="ListActivity.cs" />
+    <Compile Include="LazyList\ItemDetailActivity.cs" />
+    <Compile Include="LazyList\LazyListActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,10 +79,13 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\List.axml">
+    <AndroidResource Include="Resources\layout\LazyList.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ListItemTemplate.axml">
+    <AndroidResource Include="Resources\layout\LazyListItemTemplate.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LazyListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

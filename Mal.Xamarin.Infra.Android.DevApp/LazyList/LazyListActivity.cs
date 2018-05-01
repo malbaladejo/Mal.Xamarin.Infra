@@ -1,25 +1,24 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
 using Mal.Xamarin.Infra.Android.Converters;
-using Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter;
+using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 
-namespace Mal.Xamarin.Infra.Android.DevApp
+namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
 {
     [Activity(Label = "List")]
-    public class ListActivity : ActivityBase<ListViewModel>
+    public class LazyListActivity : ActivityBase<LazyListViewModel>
     {
-        protected async override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.List);
+            SetContentView(Resource.Layout.LazyList);
 
-            var adapter = ListViewAdapter<ListViewItem>.Build(this.Items, this.DataContext.Items, this.GetAdapter, this.LayoutInflater);
+            ListViewAdapter<LazyListItemViewModel>.Build(this.Items, this.DataContext.Items, this.GetAdapter, this.LayoutInflater);
 
             this.Items.ChoiceMode = ChoiceMode.Single;
             this.Items.ItemClick += Items_ItemClick;
@@ -39,24 +38,21 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 
         private void Items_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
-            this.DataContext.MultiSelectionEnabled = true;
-            this.DataContext.Items[e.Position].IsSelected = true;
+            if (this.DataContext.EnableMultiSelectCommand.CanExecute(this.DataContext.Items[e.Position]))
+                this.DataContext.EnableMultiSelectCommand.Execute(this.DataContext.Items[e.Position]);
         }
 
         private void Items_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            if (this.DataContext.MultiSelectionEnabled)
-            {
-                this.DataContext.Items[e.Position].IsSelected = !this.DataContext.Items[e.Position].IsSelected;
-            }
+            if (this.DataContext.SelectItemCommand.CanExecute(this.DataContext.Items[e.Position]))
+                this.DataContext.SelectItemCommand.Execute(this.DataContext.Items[e.Position]);
         }
 
         public ListView Items => this.GetView<ListView>(Resource.Id.list_items);
 
-
-        private View GetAdapter(ListViewItem item)
+        private View GetAdapter(LazyListItemViewModel item)
         {
-            var view = this.LayoutInflater.Inflate(Resource.Layout.ListItemTemplate, null);
+            var view = this.LayoutInflater.Inflate(Resource.Layout.LazyListItemTemplate, null);
 
             var checkbox = view.FindViewById<CheckBox>(Resource.Id.listviewtemplate_check);
 
@@ -77,7 +73,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp
             return view;
         }
 
-        private void SetItemBackground(View view, ListViewItem item)
+        private void SetItemBackground(View view, LazyListItemViewModel item)
         {
             if (item.IsSelected && this.DataContext.MultiSelectionEnabled)
                 view.SetBackgroundResource(Resource.Color.blue_200);

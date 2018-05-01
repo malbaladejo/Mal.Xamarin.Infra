@@ -1,7 +1,6 @@
 ﻿using Mal.Xamarin.Infra.Containers;
 using Mal.Xamarin.Infra.DevApp.Services;
-using Mal.Xamarin.Infra.DevApp.ViewModels;
-using Mal.Xamarin.Infra.DevApp.ViewModels.ListAdapter;
+using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 using Mal.Xamarin.Infra.DevApp.ViewModels.Main;
 
 namespace Mal.Xamarin.Infra.DevApp
@@ -14,7 +13,8 @@ namespace Mal.Xamarin.Infra.DevApp
             container.RegisterType<IHomePageServiceProvider, HomePageServiceProvider>();
 
             container.RegisterType<MainViewModel>();
-            container.RegisterType<ListViewModel>();
+            container.RegisterType<LazyListViewModel>();
+            container.RegisterType<ItemDetailViewModel>();
         }
     }
 }
