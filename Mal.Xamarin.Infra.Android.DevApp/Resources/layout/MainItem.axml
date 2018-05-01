@@ -3,16 +3,19 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:minWidth="25px"
-              android:minHeight="25px">
+              android:gravity="top">
   <TextView
-    android:text="Large Text"
+    android:text="icon"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/lazylistitem_title" />
-  <EditText
+    android:gravity="center_horizontal"
+    android:id="@+id/main_item_icon" />
+  <TextView
+    android:text="title"
+    android:textAppearance="?android:attr/textAppearanceSmall"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/lazylistitem_edittitle" />
+    android:gravity="center_horizontal"
+    android:id="@+id/main_item_title" />
 </LinearLayout>

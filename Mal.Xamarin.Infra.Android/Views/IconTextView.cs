@@ -37,7 +37,7 @@ namespace Mal.Xamarin.Infra.Android.Views
 
         private void Initialze(Context context)
         {
-            this.SetTypeface(context.Assets);
+            this.SetIconTypeface(context.Assets);
         }
     }
 }

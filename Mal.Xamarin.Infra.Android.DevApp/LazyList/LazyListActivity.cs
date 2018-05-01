@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Graphics;
 using Android.OS;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
@@ -10,11 +11,16 @@ using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
 {
     [Activity(Label = "List")]
-    public class LazyListActivity : ActivityBase<LazyListViewModel>
+    public class LazyListActivity : AppCompatActivity
     {
+        private SimpleActivityBootstrapper bootstrapper;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            this.bootstrapper = new SimpleActivityBootstrapper(this);
+            this.bootstrapper.Run(Resource.Layout.LazyList);
+            this.DataContext = this.bootstrapper.BuildDataContext<LazyListViewModel>();
             ListViewAdapter<LazyListItemViewModel>.Build(this.Items, this.DataContext.Items, this.GetAdapter, this.LayoutInflater);
 
             this.Items.ChoiceMode = ChoiceMode.Single;
@@ -33,6 +39,12 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
             this.DataContext.MultiSelectionEnabled = false;
         }
 
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            this.OnBackPressed();
+            return base.OnOptionsItemSelected(item);
+        }
+
         private void Items_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
             if (this.DataContext.EnableMultiSelectCommand.CanExecute(this.DataContext.Items[e.Position]))
@@ -45,7 +57,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
                 this.DataContext.SelectItemCommand.Execute(this.DataContext.Items[e.Position]);
         }
 
-        public ListView Items => this.GetView<ListView>(Resource.Id.list_items);
+        public ListView Items => this.bootstrapper.GetView<ListView>(Resource.Id.list_items);
 
         private View GetAdapter(LazyListItemViewModel item)
         {
@@ -77,5 +89,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
             else
                 view.SetBackgroundColor(Color.Transparent);
         }
+
+        private LazyListViewModel DataContext { get; set; }
     }
 }

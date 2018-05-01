@@ -1,4 +1,6 @@
-﻿using Mal.Xamarin.Infra.Containers;
+﻿using GalaSoft.MvvmLight.Views;
+using Mal.Xamarin.Infra.Android.Navigation;
+using Mal.Xamarin.Infra.Containers;
 
 namespace Mal.Xamarin.Infra.Android.Containers
 {
@@ -11,6 +13,12 @@ namespace Mal.Xamarin.Infra.Android.Containers
             this.container = new LightInjectContainer();
         }
 
-        protected override IContainer BuildContainer() => this.container;
+        protected override IContainer BuildContainer()
+        {
+            var navigationService = new AndroidNavigationService();
+            container.RegisterInstance<INavigationService>(navigationService);
+            container.RegisterInstance<IAndroidNavigationService>(navigationService);
+            return this.container;
+        }
     }
 }

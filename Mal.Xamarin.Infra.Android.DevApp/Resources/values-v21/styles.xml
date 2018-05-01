@@ -5,7 +5,7 @@
   </style>-->
   
   <!-- Inherit from the light Material Theme -->
-  <style name="Theme.Material.Light.ColoredBar" parent="android:Theme.Material.Light">
+  <!--<style name="Theme.Material.Light.ColoredBar" parent="android:Theme.Material.Light">-->
     <!-- Override the app bar color -->
     <!--<item name="android:colorPrimary">@color/blue_500</item>
     --><!-- Override the app statusbar color --><!--
@@ -20,6 +20,6 @@
     --><!-- Override the background buton color --><!--
     <item name="android:colorButtonNormal">@color/blue_600</item>-->
     <!--<item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom</item>-->
-  </style>
+  <!--</style>-->
   
 </resources>

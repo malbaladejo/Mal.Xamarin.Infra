@@ -1,10 +1,10 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
-using Mal.Xamarin.Infra.Fonts;
-using Mal.Xamarin.Infra.Navigation;
-using System.Windows.Input;
+using Mal.Xamarin.Infra.DevApp.ViewModels.BurgerMenu;
 using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
+using Mal.Xamarin.Infra.Navigation;
+using System.Collections.ObjectModel;
 
 namespace Mal.Xamarin.Infra.DevApp.ViewModels.Main
 {
@@ -12,14 +12,17 @@ namespace Mal.Xamarin.Infra.DevApp.ViewModels.Main
     {
         public MainViewModel(INavigationService navigationService)
         {
-            this.NavigateToListViewCommand =
-                new RelayCommand(() => navigationService.NavigateToToken(new LazyListNavigationToken()));
+            this.NavigateCommand = new RelayCommand<INavigationToken>(navigationService.NavigateToToken);
+
+            this.Tokens = new ObservableCollection<INavigationToken>(new INavigationToken[]
+            {
+                new LazyListNavigationToken(),
+                new BurgerMenuNavigationToken()
+            });
         }
 
-        public INavigationToken ListNavigationToken { get; } = new LazyListNavigationToken();
+        public ObservableCollection<INavigationToken> Tokens { get; }
 
-        public string Icon => IconFont.Android;
-
-        public ICommand NavigateToListViewCommand { get; }
+        public RelayCommand<INavigationToken> NavigateCommand { get; }
     }
 }

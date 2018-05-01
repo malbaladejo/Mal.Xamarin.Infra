@@ -1,5 +1,6 @@
 ﻿using Mal.Xamarin.Infra.Containers;
 using Mal.Xamarin.Infra.DevApp.Services;
+using Mal.Xamarin.Infra.DevApp.ViewModels.BurgerMenu;
 using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 using Mal.Xamarin.Infra.DevApp.ViewModels.Main;
 
@@ -15,6 +16,7 @@ namespace Mal.Xamarin.Infra.DevApp
             container.RegisterType<MainViewModel>();
             container.RegisterType<LazyListViewModel>();
             container.RegisterType<ItemDetailViewModel>();
+            container.RegisterType<BurgerMenuViewModel>();
         }
     }
 }
