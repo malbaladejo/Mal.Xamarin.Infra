@@ -36,4 +36,5 @@ namespace Mal.Xamarin.Infra.Containers
 
         public static IServiceLocator Current { get; internal set; }
     }
+
 }

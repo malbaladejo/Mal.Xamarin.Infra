@@ -14,8 +14,6 @@ namespace Mal.Xamarin.Infra.Android.DevApp
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Main);
-
             Icon.SetTypeface(Assets);
 
             this.SetBinding(() => this.DataContext.ListNavigationToken.Title, () => this.ListButton.Text);

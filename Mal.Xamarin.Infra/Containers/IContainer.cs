@@ -13,6 +13,7 @@ namespace Mal.Xamarin.Infra.Containers
         void RegisterType<TType>();
         void RegisterSingleton<TFrom, TTo>() where TTo : TFrom;
         void RegisterInstance<TType>(TType instance);
+        void RegisterInstance<TType>(TType instance, string key);
 
         IEnumerable<object> GetAllInstances(Type serviceType);
         IEnumerable<TService> GetAllInstances<TService>();

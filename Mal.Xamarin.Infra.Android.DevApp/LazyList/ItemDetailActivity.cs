@@ -12,7 +12,6 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            SetContentView(Resource.Layout.LazyListItem);
             base.OnCreate(savedInstanceState);
         }
 
@@ -26,7 +25,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
 
             this.DataContext.Item?.SetBinding<string, string>(nameof(LazyListItemViewModel.Title),
                 this.GetView<EditText>(Resource.Id.lazylistitem_edittitle),
-                targetPropertyName: nameof(EditText.Text), mode:BindingMode.TwoWay);
+                targetPropertyName: nameof(EditText.Text), mode: BindingMode.TwoWay);
         }
     }
 }

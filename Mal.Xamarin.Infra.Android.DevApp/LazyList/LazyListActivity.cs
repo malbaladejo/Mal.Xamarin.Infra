@@ -15,9 +15,6 @@ namespace Mal.Xamarin.Infra.Android.DevApp.LazyList
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            SetContentView(Resource.Layout.LazyList);
-
             ListViewAdapter<LazyListItemViewModel>.Build(this.Items, this.DataContext.Items, this.GetAdapter, this.LayoutInflater);
 
             this.Items.ChoiceMode = ChoiceMode.Single;

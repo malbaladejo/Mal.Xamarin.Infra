@@ -20,9 +20,12 @@ namespace Mal.Xamarin.Infra.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            this.DataContext = ServiceLocator.Current.GetInstance<TViewModel>();
-            this.NavigationService = ServiceLocator.Current.GetInstance<NavigationService>();
 
+            this.SetDataContext();
+
+            this.SetContentView();
+
+            this.NavigationService = ServiceLocator.Current.GetInstance<NavigationService>();
             this.OnNavigatedTo(this.NavigationService.GetAndRemoveParameter<INavigationToken>(this.Intent));
         }
 
@@ -30,14 +33,6 @@ namespace Mal.Xamarin.Infra.Android
         {
             base.OnResume();
             this.ManageBackButton();
-        }
-
-        private void ManageBackButton()
-        {
-            if (this.NavigationService.CurrentPageKey == NavigationService.RootPageKey)
-                return;
-
-            this.ActionBar.SetDisplayHomeAsUpEnabled(true);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -62,6 +57,28 @@ namespace Mal.Xamarin.Infra.Android
                 this.views[id] = this.FindViewById<TView>(id);
 
             return (TView)this.views[id];
+        }
+
+        private void SetDataContext()
+        {
+            TViewModel dataContext = default(TViewModel);
+            if (ServiceLocator.Current.TryGetInstance(ref dataContext))
+                this.DataContext = dataContext;
+        }
+
+        private void SetContentView()
+        {
+            var layoutResourceId = 0;
+            if (ServiceLocator.Current.TryGetInstance(ref layoutResourceId, this.GetType().FullName))
+                SetContentView(layoutResourceId);
+        }
+
+        private void ManageBackButton()
+        {
+            if (this.NavigationService.CurrentPageKey == NavigationService.RootPageKey)
+                return;
+
+            this.ActionBar.SetDisplayHomeAsUpEnabled(true);
         }
     }
 }

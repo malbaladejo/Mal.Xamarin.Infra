@@ -12,9 +12,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
         public override void RegisterTypes(IContainer container)
         {
             base.RegisterTypes(container);
-            container.RegisterViewForNavigation<MainActivity, MainNavigationToken>();
-            container.RegisterViewForNavigation<LazyListActivity, LazyListNavigationToken>();
-            container.RegisterViewForNavigation<ItemDetailActivity, LazyListItemNavigationToken>();
+            container.RegisterActivityForNavigation<MainActivity, MainNavigationToken>(Resource.Layout.Main);
+            container.RegisterActivityForNavigation<LazyListActivity, LazyListNavigationToken>(Resource.Layout.LazyList);
+            container.RegisterActivityForNavigation<ItemDetailActivity, LazyListItemNavigationToken>(Resource.Layout.LazyListItem);
         }
     }
 }
