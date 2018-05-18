@@ -5,12 +5,13 @@ using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
 using Mal.Xamarin.Infra.Android.Fonts;
+using Mal.Xamarin.Infra.DevApp.Translation;
 using Mal.Xamarin.Infra.DevApp.ViewModels.Main;
 using Mal.Xamarin.Infra.Navigation;
 
 namespace Mal.Xamarin.Infra.Android.DevApp
 {
-    [Activity(Label = "DevApp", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : AppCompatActivity
     {
         private SimpleActivityBootstrapper bootstrapper;
@@ -21,6 +22,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 
             this.bootstrapper = new SimpleActivityBootstrapper(this);
             this.bootstrapper.Run(Resource.Layout.Main);
+            this.bootstrapper.Toolbar.Title = this.bootstrapper.TranslationService.GetTranslation(ResourceKeys.MainActivityTitle);
             this.DataContext = this.bootstrapper.BuildDataContext<MainViewModel>();
 
             this.GridView.Adapter = this.DataContext.Tokens.GetAdapter(this.GetAdapter);

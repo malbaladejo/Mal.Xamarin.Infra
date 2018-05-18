@@ -1,4 +1,4 @@
-﻿using Mal.XF.Infra.Services;
+﻿using Mal.Xamarin.Infra.Services;
 
 namespace Mal.Xamarin.Infra.DevApp.Services
 {

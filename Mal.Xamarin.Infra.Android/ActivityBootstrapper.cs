@@ -3,6 +3,7 @@ using Android.Views;
 using Mal.Xamarin.Infra.Android.Navigation;
 using Mal.Xamarin.Infra.Containers;
 using Mal.Xamarin.Infra.Navigation;
+using Mal.Xamarin.Infra.Translation;
 using System.Collections.Generic;
 
 namespace Mal.Xamarin.Infra.Android
@@ -75,6 +76,8 @@ namespace Mal.Xamarin.Infra.Android
         protected IAndroidNavigationService NavigationService =>
             ServiceLocator.Current.GetInstance<IAndroidNavigationService>();
 
+        public ITranslationService TranslationService =>
+            ServiceLocator.Current.GetInstance<ITranslationService>();
 
         private TViewModel GetDataContext<TViewModel>()
         {

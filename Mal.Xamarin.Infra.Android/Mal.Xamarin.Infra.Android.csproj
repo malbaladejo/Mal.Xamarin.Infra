@@ -95,7 +95,6 @@
   <ItemGroup>
     <Compile Include="ActivityBootstrapper.cs" />
     <Compile Include="AppCompatActivityBootstrapper.cs" />
-    <Compile Include="ApplicationBase.cs" />
     <Compile Include="Containers\AndroidAppBootstrapper.cs" />
     <Compile Include="Containers\AndroidContainerExtensions.cs" />
     <Compile Include="Converters\BoolToViewStatesConverter.cs" />

@@ -1,4 +1,5 @@
 ﻿using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 
 namespace Mal.Xamarin.Infra.Android.DevApp
 {
@@ -14,5 +15,7 @@ namespace Mal.Xamarin.Infra.Android.DevApp
             this.SetInnerContentView(innerViewLayoutId, Resource.Id.activitywithtoolbar_content_frame);
             this.BuildToolbar(Resource.Id.activitywithtoolbar_toolbar);
         }
+
+        public Toolbar Toolbar => this.GetView<Toolbar>(Resource.Id.activitywithtoolbar_toolbar);
     }
 }

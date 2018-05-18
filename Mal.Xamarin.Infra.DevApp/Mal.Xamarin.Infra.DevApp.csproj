@@ -12,4 +12,19 @@
     <ProjectReference Include="..\Mal.Xamarin.Infra\Mal.Xamarin.Infra.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Translation\Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Translation\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

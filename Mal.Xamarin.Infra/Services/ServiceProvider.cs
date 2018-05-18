@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Mal.XF.Infra.Services
+namespace Mal.Xamarin.Infra.Services
 {
     public class ServiceProvider<T> : IServiceRegister<T>, IServiceProvider<T>
     {
