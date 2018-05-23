@@ -20,6 +20,9 @@ namespace Mal.Xamarin.Infra.DevApp
             container.RegisterType<BurgerMenuViewModel>();
             container.RegisterType<TranslationBootstrapper>();
             container.ServiceLocator.GetInstance<TranslationBootstrapper>().Run();
+
+            container.RegisterType<MainBootstrapper>();
+            container.ServiceLocator.GetInstance<MainBootstrapper>().Run();
         }
     }
 }

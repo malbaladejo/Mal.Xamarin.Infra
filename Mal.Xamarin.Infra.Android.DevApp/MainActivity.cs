@@ -52,36 +52,6 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 
         private MainViewModel DataContext { get; set; }
 
-        //private void InitializeListButton()
-        //{
-        //    this.DataContext.SetBinding<INavigationToken, string>(nameof(this.DataContext.ListNavigationToken),
-        //       this.ListButton, nameof(this.ListButton.Text)).
-        //       ConvertSourceToTarget(FormatTokenName);
-
-        //    this.ListButton.SetIconTypeface(this.Assets);
-        //    this.ListButton.SetCommand<INavigationToken>(nameof(this.ListButton.Click),
-        //        this.DataContext.NavigateCommand,
-        //        this.DataContext.ListNavigationToken);
-        // }
-
-        //private void InitializeBurgeMenuButton()
-        //{
-        //    this.DataContext.SetBinding<INavigationToken, string>(nameof(this.DataContext.BurgerMenuNavigationToken),
-        //       this.BurgerMenuButton, nameof(this.BurgerMenuButton.Text)).
-        //       ConvertSourceToTarget(FormatTokenName);
-
-        //    this.BurgerMenuButton.SetIconTypeface(this.Assets);
-        //    this.BurgerMenuButton.SetCommand<INavigationToken>(nameof(this.BurgerMenuButton.Click),
-        //        this.DataContext.NavigateCommand,
-        //        this.DataContext.BurgerMenuNavigationToken);
-        //}
-
         public GridView GridView => this.bootstrapper.GetView<GridView>(Resource.Id.main_gridview);
-
-        //public Button ListButton => this.GetView<Button>(Resource.Id.listButton);
-        //public Button BurgerMenuButton => this.GetView<Button>(Resource.Id.burgerMenuButton);
-
-        private static string FormatTokenName(INavigationToken token)
-            => $"{token.Icon} {token.Title}";
     }
 }

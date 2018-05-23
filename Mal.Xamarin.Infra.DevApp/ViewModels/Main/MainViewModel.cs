@@ -5,20 +5,16 @@ using Mal.Xamarin.Infra.DevApp.ViewModels.BurgerMenu;
 using Mal.Xamarin.Infra.DevApp.ViewModels.LazyList;
 using Mal.Xamarin.Infra.Navigation;
 using System.Collections.ObjectModel;
+using Mal.Xamarin.Infra.Services;
 
 namespace Mal.Xamarin.Infra.DevApp.ViewModels.Main
 {
     public class MainViewModel : ViewModelBase
     {
-        public MainViewModel(INavigationService navigationService)
+        public MainViewModel(INavigationService navigationService, IServiceProvider<INavigationToken> mainItemServiceProvider)
         {
             this.NavigateCommand = new RelayCommand<INavigationToken>(navigationService.NavigateToToken);
-
-            this.Tokens = new ObservableCollection<INavigationToken>(new INavigationToken[]
-            {
-                new LazyListNavigationToken(),
-                new BurgerMenuNavigationToken()
-            });
+            this.Tokens = new ObservableCollection<INavigationToken>(mainItemServiceProvider.Items);
         }
 
         public ObservableCollection<INavigationToken> Tokens { get; }

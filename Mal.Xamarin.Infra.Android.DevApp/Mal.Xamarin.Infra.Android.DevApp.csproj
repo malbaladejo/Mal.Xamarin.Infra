@@ -50,6 +50,9 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.3\lib\netstandard2.0\CommonServiceLocator.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=0ffbc31322e9d308, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibsStd10.5.4.1\lib\monoandroid1\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
@@ -106,6 +109,10 @@
     <Compile Include="AndroidAppBootstrapperStrategy.cs" />
     <Compile Include="App.cs" />
     <Compile Include="BrugerMenu\BurgerMenuActivity.cs" />
+    <Compile Include="CollapsibleHeader\CollapsibleHeaderActivity.cs" />
+    <Compile Include="CollapsibleHeader\CollapsibleHeaderItemViewModel.cs" />
+    <Compile Include="CollapsibleHeader\CollapsibleHeaderToken.cs" />
+    <Compile Include="CollapsibleHeader\CollapsibleHeaderViewModel.cs" />
     <Compile Include="SimpleActivityBootstrapper.cs" />
     <Compile Include="LazyList\ItemDetailActivity.cs" />
     <Compile Include="LazyList\LazyListActivity.cs" />
@@ -176,6 +183,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\ActivityWithToolbarLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CollapsibleHeader.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CollapsibleheaderItemTemplate.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
