@@ -21,6 +21,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
             container.RegisterActivityForNavigation<LazyListActivity, LazyListNavigationToken>();
             container.RegisterActivityForNavigation<ItemDetailActivity, LazyListItemNavigationToken>();
             container.RegisterActivityForNavigation<BurgerMenuActivity, BurgerMenuNavigationToken>();
+
+            container.RegisterType<CollapsibleHeaderViewModel>();
             container.RegisterActivityForNavigation<CollapsibleHeaderActivity, CollapsibleHeaderToken>();
 
             container.ServiceLocator.GetInstance<IServiceRegister<INavigationToken>>().Register(new CollapsibleHeaderToken());

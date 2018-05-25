@@ -14,7 +14,7 @@ namespace Mal.Xamarin.Infra.Android
 
         protected AppCompatActivity AppCompatActivity => this.activity;
 
-        public void BuildToolbar(int toolbarId)
+        public Toolbar BuildToolbar(int toolbarId)
         {
             var toolbar = this.GetView<Toolbar>(toolbarId);
             // HACK: si toolbar.Title est null avant SetSupportActionBar, les champs de title ne seront pas pris en compte par la suite.
@@ -24,10 +24,12 @@ namespace Mal.Xamarin.Infra.Android
             this.activity.SetSupportActionBar(toolbar);
 
             if (this.NavigationService.CurrentPageKey == NavigationService.RootPageKey)
-                return;
+                return toolbar;
 
             this.activity.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this.activity.SupportActionBar.SetHomeButtonEnabled(true);
+
+            return toolbar;
         }
     }
 }
