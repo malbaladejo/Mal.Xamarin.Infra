@@ -1,4 +1,5 @@
 ﻿using Mal.Xamarin.Infra.Containers;
+using Mal.Xamarin.Infra.DevApp.OpenFoodFacts;
 using Mal.Xamarin.Infra.DevApp.Services;
 using Mal.Xamarin.Infra.DevApp.Translation;
 using Mal.Xamarin.Infra.DevApp.ViewModels.BurgerMenu;
@@ -23,6 +24,8 @@ namespace Mal.Xamarin.Infra.DevApp
 
             container.RegisterType<MainBootstrapper>();
             container.ServiceLocator.GetInstance<MainBootstrapper>().Run();
+            container.RegisterType<OpenFoodFactsBootstrapper>();
+            container.ServiceLocator.GetInstance<OpenFoodFactsBootstrapper>().Run();
         }
     }
 }

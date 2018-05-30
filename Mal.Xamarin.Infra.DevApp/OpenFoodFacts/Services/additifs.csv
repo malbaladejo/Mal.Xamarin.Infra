@@ -1,0 +1,498 @@
+Code,Titre,Toxixité,Code toxicité
+E161,Xantophylles, ,0
+E161j,Astaxanthine (xantophylles), ,0
+E164,"Jaune de gardénia, Safran, Crocine, Crocétine", ,0
+E165,Bleu de gardénia, ,0
+E313,Gallate d'éthyle, ,0
+E370,"Heptonolactone (1,4-)", ,0
+E399,Lactobionate de calcium, ,0
+E409,Arabinogalactane, ,0
+E419,Gomme ghatti, ,0
+E429,Peptones, ,0
+E446,Succistéarine, ,0
+E485,Stéaroyl fumarate de sodium, ,0
+E486,Stearoyl fumarate de calcium, ,0
+E489,Ester de méthylglycoside d'huile de coco, ,0
+E502,Carbonates, ,0
+E638,Aspartate de sodium (L-), ,0
+E908,Cire de son de riz, ,0
+E909,Cire de blanc de baleine, ,0
+E910,Esters de cires, ,0
+E911,"Esters méthyliques d'acides gras, EMAG", ,0
+E945,Chloropentafluoroéthane, ,0
+E946,Octafluorocyclobutane, ,0
+E1205,Copolymère méthacrylate basique, ,0
+E161a,Flavoxanthine (xanthophylles),Pas/peu toxique,1
+E161d,Rubixanthine (xanthophylles),Pas/peu toxique,1
+E161e,Violaxanthine (xanthophylles),Pas/peu toxique,1
+E161i,Citranaxanthine (xantophylles),Pas/peu toxique,1
+E166,Bois de santal,Pas/peu toxique,1
+E170,Carbonate de calcium,Pas/peu toxique,1
+E241,Gomme gaïac,Pas/peu toxique,1
+E296,Acide malique (L- ou DL-),Pas/peu toxique,1
+E297,Acide fumarique,Pas/peu toxique,1
+E300,"Acide ascorbique (L-), Vitamine C",Pas/peu toxique,1
+E301,Ascorbate de sodium,Pas/peu toxique,1
+E302,Ascorbate de calcium,Pas/peu toxique,1
+E303,Ascorbate de potassium,Pas/peu toxique,1
+E306,"Tocophérols, Extraits riches en vitamine E",Pas/peu toxique,1
+E307,"Alpha-tocophérol (DL-, synthétique)",Pas/peu toxique,1
+E308,"Gamma-tocophérol (DL-, synthétique)",Pas/peu toxique,1
+E309,"Delta-tocophérol (DL-, synthétique)",Pas/peu toxique,1
+E314,Résine de gaïac,Pas/peu toxique,1
+E315,"Acide érythorbique, Acide isoascorbique",Pas/peu toxique,1
+E316,"Erythorbate de sodium, Isoascorbate de sodium",Pas/peu toxique,1
+E317,"Erythorbate de potassium, Isoascorbate de potassium",Pas/peu toxique,1
+E318,"Erythorbate de calcium, Isoascorbate de calcium",Pas/peu toxique,1
+E334,"Acide L(+)-tartrique, Acide L(+)-tartarique",Pas/peu toxique,1
+E335,Tartrate de sodium,Pas/peu toxique,1
+E336,Tartrate de potassium,Pas/peu toxique,1
+E337,Tartrate double de sodium et de potassium,Pas/peu toxique,1
+E350,Malate de sodium (DL-),Pas/peu toxique,1
+E351,Malate de potassium (DL-),Pas/peu toxique,1
+E352,Malate de calcium (DL-),Pas/peu toxique,1
+E353,"Acide métatartrique, Acide métatartarique",Pas/peu toxique,1
+E354,"Tartrate de calcium (L-, DL-)",Pas/peu toxique,1
+E365,Fumarates de sodium,Pas/peu toxique,1
+E366,Fumarates de potassium,Pas/peu toxique,1
+E367,Fumarates de calcium,Pas/peu toxique,1
+E383,Glycérophosphate de calcium,Pas/peu toxique,1
+E391,Acide phytique,Pas/peu toxique,1
+E392,Extrait de romarin,Pas/peu toxique,1
+E400,Acide alginique,Pas/peu toxique,1
+E401,Alginate de sodium,Pas/peu toxique,1
+E402,Alginate de potassium,Pas/peu toxique,1
+E404,Alginate de calcium,Pas/peu toxique,1
+E406,"Agar-agar, Layor Carang, Isinglass du Japon",Pas/peu toxique,1
+E408,Glycane de levure de boulanger,Pas/peu toxique,1
+E410,"Gomme de caroube, Farine de graine de caroube",Pas/peu toxique,1
+E411,Gomme d'avoine,Pas/peu toxique,1
+E412,Gomme de guar,Pas/peu toxique,1
+E413,"Gomme adragante, Gomme de dragon, Tragacanthe",Pas/peu toxique,1
+E414,"Gomme arabique, Gomme d'acacia",Pas/peu toxique,1
+E415,Gomme xanthane,Pas/peu toxique,1
+E416,"Gomme karaya, Gomme sterculia",Pas/peu toxique,1
+E417,Gomme tara,Pas/peu toxique,1
+E418,Gomme gellane,Pas/peu toxique,1
+E427,Gomme cassia,Pas/peu toxique,1
+E500,Carbonates de sodium,Pas/peu toxique,1
+E501,Carbonates de potassium,Pas/peu toxique,1
+E504,Carbonates de magnésium,Pas/peu toxique,1
+E508,Chlorure de potassium,Pas/peu toxique,1
+E511,Chlorure de magnésium,Pas/peu toxique,1
+E518,Sulfate de magnésium,Pas/peu toxique,1
+E528,"Hydroxyde de magnésium, Lait de magnésie",Pas/peu toxique,1
+E529,"Oxyde de calcium, Chaux, Chaux vive",Pas/peu toxique,1
+E530,Oxyde de magnésium,Pas/peu toxique,1
+E639,Alanine (DL-),Pas/peu toxique,1
+E901,"Cire d'abeille, Cire blanche, Cire jaune",Pas/peu toxique,1
+E902,Cire de candelilla,Pas/peu toxique,1
+E916,Iodate de calcium,Pas/peu toxique,1
+E917,Iodate de potassium,Pas/peu toxique,1
+E938,Argon,Pas/peu toxique,1
+E939,Hélium,Pas/peu toxique,1
+E941,Azote,Pas/peu toxique,1
+E948,Oxygène,Pas/peu toxique,1
+E949,Hydrogène,Pas/peu toxique,1
+E958,"Glycyrrhizine, Acide glycyrrhizique, Liquorice, Licorice",Pas/peu toxique,1
+E959,"Dihydrochalcone de néohespéridine, Néohespéridine DC, NHDC",Pas/peu toxique,1
+E960,Glycosides de stéviol,Pas/peu toxique,1
+E963,Tagatose (D-),Pas/peu toxique,1
+E966,Lactitol,Pas/peu toxique,1
+E1000,Acide cholique,Pas/peu toxique,1
+E1001,Choline (sels et esters de-),Pas/peu toxique,1
+E1100,Amylases,Pas/peu toxique,1
+E1101,"Protéases (Protéase, Papaïne, Bromélaïne, Ficine)",Pas/peu toxique,1
+E1102,Glucose oxydase,Pas/peu toxique,1
+E1103,Invertases,Pas/peu toxique,1
+E1104,Lipases,Pas/peu toxique,1
+E1204,"Pullulan, Pullulane",Pas/peu toxique,1
+E1518,"Triacétine, Triacétate de glycérol, Triacétate de glycéryle",Pas/peu toxique,1
+E120,"Cochenille, Acide Carminique, Carmins",Douteux,3
+E141,Complexes cuivriques des chlorophilles et des chlorophyllines,Douteux,3
+E160a,"Carotène (bêta-), ?-carotène, Provitamine A",Douteux,3
+E160b,"Rocou, Annatto, Bixine, Norbixine",Douteux,3
+E172,"Oxydes de fer, Hydroxydes de fer",Douteux,3
+E174,"Argent, Argentum",Douteux,3
+E175,"Or, Aurum, Au",Douteux,3
+E200,Acide sorbique,Douteux,3
+E201,Sorbate de sodium,Douteux,3
+E202,Sorbate de potassium,Douteux,3
+E203,Sorbate de calcium,Douteux,3
+E236,Acide formique,Douteux,3
+E237,Formiate de sodium,Douteux,3
+E238,Formiate de calcium,Douteux,3
+E264,"Acétate d'ammonium, Ethanoate d'ammonium",Douteux,3
+E280,Acide propionique,Douteux,3
+E281,"Propionate de sodium, Propanoate de sodium",Douteux,3
+E282,"Propionate de calcium, Propanoate de calcium",Douteux,3
+E283,"Propionate de potassium, Propanoate de potassium",Douteux,3
+E311,Gallate d'octyle,Douteux,3
+E312,Gallate de dodécyle,Douteux,3
+E323,Anoxomère,Douteux,3
+E328,Lactate d'ammonium,Douteux,3
+E338,"Acide phosphorique, Acide orthophosphorique",Douteux,3
+E339,"Phosphates de sodium, Orthophosphates de sodium",Douteux,3
+E340,"Phosphates de potassium, Orthophosphates de potassium",Douteux,3
+E341,"Phosphates de calcium, Orthophosphates de calcium",Douteux,3
+E343,"Phosphates de magnésium, Monophosphates de magnésium",Douteux,3
+E349,Malate d'ammonium,Douteux,3
+E359,Adipates d'ammonium,Douteux,3
+E368,Fumarates d'ammonium,Douteux,3
+E380,Citrate de triammonium,Douteux,3
+E381,Citrate d'ammonium ferrique,Douteux,3
+E405,"Alginate de propylène glycol, Alginate de propane-1,2 diol",Douteux,3
+E420,"Sorbitol, Sirop de sorbitol",Douteux,3
+E421,Mannitol,Douteux,3
+E424,Curdlan,Douteux,3
+E426,Hémicellulose de soja,Douteux,3
+E440ii,Pectine amidée,Douteux,3
+E441,Huile de colza superglycérinée hydrogénée,Douteux,3
+E442,Phosphatides d'ammonium,Douteux,3
+E445,Ester glycérique de résines de bois,Douteux,3
+E450,"Diphosphates, Pyrophosphates",Douteux,3
+E451,Triphosphates,Douteux,3
+E452,Polyphosphates,Douteux,3
+E456,Polyaspartate de potassium,Douteux,3
+E459,"Cyclodextrine (Bêta-), BêtaCD, ?-Cyclodextrine",Douteux,3
+E461,Methyl cellulose,Douteux,3
+E462,Ethyl cellulose,Douteux,3
+E463,Hydroxypropyl cellulose,Douteux,3
+E464,Hydroxypropyl méthyl cellulose,Douteux,3
+E465,"Méthyléthyl cellulose, MEC",Douteux,3
+E467,Ethyl hydroxyéthyl cellulose,Douteux,3
+E468,"Carboximéthyl cellulose sodique réticulée, Gomme cellulosique réticulée",Douteux,3
+E469,"Carboximéthyl cellulose sodique hydrolysée par voie enzymatique, ...",Douteux,3
+E470,"Sels d'acides gras (ayant pour base Al, NH4, Ca, Mg, K, Na)",Douteux,3
+E470a,"Sels de sodium, de potassium et de calcium d'acides gras",Douteux,3
+E470b,Sels de magnésium d'acides gras,Douteux,3
+E471,Mono et diglycérides d'acides gras,Douteux,3
+E472a,Esters acétiques des mono- et diglycérides d'acides gras,Douteux,3
+E472b,Esters lactiques des mono- et diglycérides d'acides gras,Douteux,3
+E472c,Esters citriques des mono- et diglycérides d'acides gras,Douteux,3
+E472d,Esters tartriques des mono- et diglycérides d'acides gras,Douteux,3
+E472e,Esters mono- et diacétyltartriques des mono- et diglycérides d'acides gras,Douteux,3
+E472f,Esters mixtes acétiq. et tartriq. des mono- et diglycérides d'acides gras,Douteux,3
+E472g,Monoglycérides succinyles,Douteux,3
+E473,"Sucroesters d'acides gras, Esters de saccharose d'acides gras",Douteux,3
+E473a,Oligoesters de saccharose de type I et de type II,Douteux,3
+E474,"Sucroglycérides, Saccharoglycérides",Douteux,3
+E475,Esters polyglycériques d'acides gras,Douteux,3
+E476,Polyricinoléate de polyglycérol,Douteux,3
+E480,"Sulfosuccinate dioctylique de sodium, Docusate de sodium, DSS",Douteux,3
+E491,Monostéarate de sorbitane,Douteux,3
+E492,Tristéarate de sorbitane,Douteux,3
+E493,Monolaurate de sorbitane,Douteux,3
+E494,Monooléate de sorbitane,Douteux,3
+E495,Monopalmitate de sorbitane,Douteux,3
+E496,Trioléate de sorbitane,Douteux,3
+E503,Carbonates d'ammonium,Douteux,3
+E510,Chlorure d'ammonium,Douteux,3
+E512,"Chlorure d'étain, Chlorure stanneux",Douteux,3
+E527,"Hydroxyde d'ammonium, Liqueur ammoniacale, Solution d'ammoniaque",Douteux,3
+E535,Ferrocyanure de sodium,Douteux,3
+E536,Ferrocyanure de potassium,Douteux,3
+E537,Hexacyanomanganate de fer,Douteux,3
+E538,Ferrocyanure de calcium,Douteux,3
+E540,"Phosphate acide de calcium, Phosphate de calcium hydrogène",Douteux,3
+E542,"Phosphate d'os, Phosphate d'os comestible",Douteux,3
+E544,Polyphosphates de calcium,Douteux,3
+E546,"Diphosphates de magnésium, Pyrophosphates de magnésium",Douteux,3
+E550,Silicate de sodium,Douteux,3
+E551,"Dioxyde de silicium (amorphe), Silice (amorphe)",Douteux,3
+E552,Silicate de calcium,Douteux,3
+E553,"Silicate de magnésium, Trisilicate de magnésium, Talc",Douteux,3
+E557,Silicate de zinc,Douteux,3
+E559,Silicate d'aluminium (kaolin léger ou lourd),Douteux,3
+E560,Silicate de potassium,Douteux,3
+E570,Acides gras,Douteux,3
+E572,"Stéarate de magnésium, Magnésium stéarate",Douteux,3
+E585,"Lactate de fer, Lactate ferreux",Douteux,3
+E626,"Acide guanylique, Guanosine 5'-monophosphate",Douteux,3
+E627,"Guanylate disodique, Guanylate-5' de sodium",Douteux,3
+E628,"Guanylate de potassium, Guanylate 5'-potassique",Douteux,3
+E629,"Guanylate de calcium, Guanylate 5'-calcique",Douteux,3
+E630,"Acide inosinique, Inosine 5'-monophosphate",Douteux,3
+E631,"Inosinate disodique, Inosinate de sodium",Douteux,3
+E632,"Inosinate dipotassique, Inosinate de potassium",Douteux,3
+E633,"Inosinate calcique, Inosinate de calcium",Douteux,3
+E634,"5'-Ribonucléotide calcique, Ribonucléotide de calcium",Douteux,3
+E635,"5'-Ribonucléotide disodique, Ribonucléotide de sodium",Douteux,3
+E636,Maltol,Douteux,3
+E637,"Ethylmaltol, Ethyl-maltol, Ethyle maltol",Douteux,3
+E905,"Cire microcristalline, Cire de pétrole, Paraffine synthétique",Douteux,3
+E905a,Huile minérale de qualité alimentaire,Douteux,3
+E905b,"Vaseline, Gelée de pétrole, Pétrolatum",Douteux,3
+E905c,"Cire microcristalline, Cire de pétrole, Cire de paraffine",Douteux,3
+E905d,Huile minérale (viscosité élevée),Douteux,3
+E912,Esters de l'acide montanique,Douteux,3
+E914,Cire de polyéthylène oxydée,Douteux,3
+E918,Oxydes d'azote,Douteux,3
+E922,Persulfate de potassium,Douteux,3
+E927a,"Azodicarbonamide, Azoformamide",Douteux,3
+E927b,"Urée, Carbamide",Douteux,3
+E930,Peroxyde de calcium,Douteux,3
+E953,Isomalt (isomaltulose hydrogéné),Douteux,3
+E955,Sucralose (trichlorogalactosucrose),Douteux,3
+E956,Alitame,Douteux,3
+E964,Sirop de polyglycitol,Douteux,3
+E965,"Maltitol, Sirop de maltitol",Douteux,3
+E967,Xylitol,Douteux,3
+E1201,"Polyvinylpyrrolidone, PVP",Douteux,3
+E1202,"Polyvinylpolypyrrolidone, PVPP",Douteux,3
+E1403,"Amidon blanchi, dit Amidon modifié",Douteux,3
+E1410,"Phosphate d'amidon, dit Amidon modifié",Douteux,3
+E1412,"Phosphate de diamidon, dit Amidon modifié",Douteux,3
+E1413,"Phosphate de diamidon phosphaté, dit Amidon modifié",Douteux,3
+E1414,"Phosphate de diamidon acétylé, dit Amidon modifié",Douteux,3
+E1420,"Amidon acétylé, Acétate d'amidon, dit Amidon modifié",Douteux,3
+E1450,"Succinate octénylique d'amidon sodique, dit Amidon modifié",Douteux,3
+E1522,Lignosulfonate de calcium (40-65),Douteux,3
+E140,"Chlorophylles, Chlorophyllines",Ne pas abuser,2
+E150a,Caramel I - nature (caramel caustique),Ne pas abuser,2
+E153,"Charbon végétal, Noir végétal",Ne pas abuser,2
+E160c,"Extrait de paprika, Capsanthéine, Capsorubine",Ne pas abuser,2
+E160d,Lycopènes,Ne pas abuser,2
+E160e,"Bêta-apo-8'-caroténal (C30), Caroténal (bêta-apo-8'-)",Ne pas abuser,2
+E160f,Ester éthylique de l'acide bêta-apo-8'-caroténoïque (C30),Ne pas abuser,2
+E161b,Lutéine (xanthophylles),Ne pas abuser,2
+E161c,Cryptoxanthine (xanthophylles),Ne pas abuser,2
+E161f,Rhodoxanthine (xanthophylles),Ne pas abuser,2
+E161g,Canthaxanthine (xanthophylles),Ne pas abuser,2
+E161h,Zeaxanthine (xantophylles),Ne pas abuser,2
+E162,"Rouge de betterave, Bétanine",Ne pas abuser,2
+E163,"Anthocyanes, Anthocyanines",Ne pas abuser,2
+E181,"Tanins, Tannins, ""Acide tannique""",Ne pas abuser,2
+E234,Nisine,Ne pas abuser,2
+E235,"Natamycine, Pimaricine",Ne pas abuser,2
+E260,"Acide acétique (glacial), Acide éthanoïque",Ne pas abuser,2
+E261,"Acétate de potassium, Ethanoate de potassium",Ne pas abuser,2
+E262,"Acétate de sodium, Ethanoate de sodium",Ne pas abuser,2
+E263,"Acétate de calcium, Ethanoate de calcium",Ne pas abuser,2
+E270,"Acide lactique (L-, D- et DL-)",Ne pas abuser,2
+E290,"Dioxyde de carbone, Gaz carbonique, Anhydride carbonique, CO2",Ne pas abuser,2
+E304,"Palmitate d'ascorbyle (i), Stéarate d'ascorbyle (ii)",Ne pas abuser,2
+E322,Lécithines,Ne pas abuser,2
+E325,Lactate de sodium,Ne pas abuser,2
+E326,Lactate de potassium,Ne pas abuser,2
+E327,Lactate de calcium,Ne pas abuser,2
+E329,Lactate de magnésium (DL-),Ne pas abuser,2
+E330,Acide citrique,Ne pas abuser,2
+E331,Citrate de sodium,Ne pas abuser,2
+E332,Citrate de potassium,Ne pas abuser,2
+E333,Citrate de calcium,Ne pas abuser,2
+E344,Citrate de lécithine,Ne pas abuser,2
+E345,Citrate de magnésium,Ne pas abuser,2
+E355,Acide adipique,Ne pas abuser,2
+E356,Adipates de sodium,Ne pas abuser,2
+E357,Adipates de potassium,Ne pas abuser,2
+E363,Acide succinique,Ne pas abuser,2
+E364,Succinates de sodium,Ne pas abuser,2
+E375,"Niacine, Acide nicotinique",Ne pas abuser,2
+E387,Oxystéarine,Ne pas abuser,2
+E388,"Acide thiodipropionique, Acide thiodipropanoïque, TDPA",Ne pas abuser,2
+E389,Thiodipropionate de dilauryle,Ne pas abuser,2
+E390,Thiodipropionate de distéaryle,Ne pas abuser,2
+E403,Alginate d'ammonium,Ne pas abuser,2
+E422,"Glycérol, Glycérine",Ne pas abuser,2
+E425,"Gomme de Konjac, Glucomannane de Konjac, Farine de Konjac",Ne pas abuser,2
+E428,Gélatine,Ne pas abuser,2
+E440i,Pectine,Ne pas abuser,2
+E444,"Acétate isobutyrate de saccharose, SAIB",Ne pas abuser,2
+E481,"Lactylates de sodium, Stéaroyl-2-lactylate de sodium",Ne pas abuser,2
+E482,"Lactylates de calcium, Stéaroyl-2-lactylate de calcium",Ne pas abuser,2
+E483,Tartrate de stéaryle,Ne pas abuser,2
+E484,Citrate de stéaryle,Ne pas abuser,2
+E505,"Carbonates de fer, Carbonates ferreux",Ne pas abuser,2
+E507,Acide chlorhydrique,Ne pas abuser,2
+E509,Chlorure de calcium,Ne pas abuser,2
+E513,Acide sulfurique,Ne pas abuser,2
+E514,Sulfate de sodium,Ne pas abuser,2
+E515,Sulfate de potassium,Ne pas abuser,2
+E516,Sulfate de calcium,Ne pas abuser,2
+E524,Hydroxyde de sodium,Ne pas abuser,2
+E525,Hydroxyde de potassium,Ne pas abuser,2
+E526,Hydroxyde de calcium,Ne pas abuser,2
+E558,Bentonite,Ne pas abuser,2
+E574,Acide gluconique (D-),Ne pas abuser,2
+E575,Glucono-delta-lactone,Ne pas abuser,2
+E576,Gluconate de sodium,Ne pas abuser,2
+E577,Gluconate de potassium,Ne pas abuser,2
+E578,Gluconate de calcium,Ne pas abuser,2
+E579,"Gluconate de fer, Gluconate ferreux",Ne pas abuser,2
+E580,Gluconate de magnésium,Ne pas abuser,2
+E640,Glycine et son sel de sodium,Ne pas abuser,2
+E641,Leucine (L-),Ne pas abuser,2
+E642,Hydrochlorure de lysine,Ne pas abuser,2
+E650,Acétate de zinc,Ne pas abuser,2
+E903,Cire de carnauba,Ne pas abuser,2
+E904,"Résine de Shellac, Shellac, Gomme-laque blanchie",Ne pas abuser,2
+E906,"Gomme benjoin, Résine benjoin, Gomme benzoïque",Ne pas abuser,2
+E913,Lanoline,Ne pas abuser,2
+E915,Esters de colophane,Ne pas abuser,2
+E920,Cystéine (L-) et ses chlorhydrates (sels de sodium et de potassium),Ne pas abuser,2
+E921,Cystine (L-) et ses chlorhydrates (sels de sodium et de potassium),Ne pas abuser,2
+E942,"Protoxyde d'azote, Oxyde nitreux",Ne pas abuser,2
+E943a,Butane,Ne pas abuser,2
+E943b,Isobutane,Ne pas abuser,2
+E944,Propane,Ne pas abuser,2
+E957,Thaumatine,Ne pas abuser,2
+E968,Erythritol,Ne pas abuser,2
+E999,Extraits de quillaia (type I et II),Ne pas abuser,2
+E1105,"Lysozyme, Lysozyme chlorhydrate",Ne pas abuser,2
+E1200,"Polydextroses A et N, Polydextroses modifiés",Ne pas abuser,2
+E1400,"Amidon torréfié, Dextrines, dit Amidon",Ne pas abuser,2
+E1401,"Amidon traité aux acides, dit Amidon modifié",Ne pas abuser,2
+E1402,"Amidon traité aux alcalis, dit Amidon modifié",Ne pas abuser,2
+E1404,"Amidon oxydé, dit Amidon modifié",Ne pas abuser,2
+E1405,"Amidon traité aux enzymes, dit Amidon",Ne pas abuser,2
+E1411,"Glycérol de diamidon, Diamidon glycériné, dit Amidon modifié",Ne pas abuser,2
+E1422,"Adipate de diamidon acétyle, dit Amidon modifié",Ne pas abuser,2
+E1451,"Amidon oxydé acétylé, dit Amidon modifié",Ne pas abuser,2
+E1503,Huile de ricin,Ne pas abuser,2
+E1505,"Citrate de triéthyle, Citrate triéthylique, Triéthyl-citrate",Ne pas abuser,2
+E1510,"Ethanol, Alcool éthylique",Ne pas abuser,2
+E1517,"Diacétine, Diacétate de glycérol, Diacétate de glycéryle",Ne pas abuser,2
+E1519,"Alcool de benzyle, Alcool benzylique, Phénylméthanol",Ne pas abuser,2
+E1520,"Propylène glycol, Propane diol-1,2",Ne pas abuser,2
+E107,Jaune 2G,Toxique,4
+E131,Bleu patenté V,Toxique,4
+E150b,Caramel II - procédé au sulfite caustique,Toxique,4
+E150c,Caramel III - procédé à l'ammoniaque,Toxique,4
+E152,"Noir de carbone (hydrocarbure, ex-Noir 7984)",Toxique,4
+E171,"Dioxyde de titane, Bioxyde de titane",Toxique,4
+E173,Aluminium,Toxique,4
+E180,"Litholrubine BK, Carmin 6B, Pigment rubis",Toxique,4
+E182,"Orseille, Orcéine",Toxique,4
+E209,"Heptyl parabène, Hydroxybenzoate d'hepthyle (para-)",Toxique,4
+E210,Acide benzoïque,Toxique,4
+E211,Benzoate de sodium,Toxique,4
+E212,Benzoate de potassium,Toxique,4
+E213,Benzoate de calcium,Toxique,4
+E214,"Ethylparabène, Hydroxybenzoate d'éthyle (para-)",Toxique,4
+E215,"Ethylparabène sodique, Hydroxybenzoate d'éthyle sodique (para-)",Toxique,4
+E218,"Méthylparabène, Hydroxybenzoate de méthyle (para-)",Toxique,4
+E219,"Méthylparabène sodique, Hydroxybenzoate de méthyle sodique (para-)",Toxique,4
+E220,"Dioxyde de soufre, Anhydride sulfureux",Toxique,4
+E221,Sulfite de sodium,Toxique,4
+E222,"Bisulfite de sodium, Sulfite acide de sodium",Toxique,4
+E223,"Métabisulfite de sodium, Pyrosulfite de sodium",Toxique,4
+E224,"Métabisulfite de potassium, Pyrosulfite de potassium",Toxique,4
+E225,Sulfite de potassium,Toxique,4
+E226,Sulfite de calcium,Toxique,4
+E227,"Bisulfite de calcium, Sulfite acide de calcium",Toxique,4
+E228,"Bisulfite de potassium, Sulfite acide de potassium",Toxique,4
+E230,"Diphényle, Biphényle",Toxique,4
+E231,"Orthophénylphénol, 2-Phénylphénol",Toxique,4
+E232,"Orthophénylphénol de sodium, Orthophénylphénate de sodium",Toxique,4
+E233,"Thiabendazole, Benzimidazole",Toxique,4
+E242,"Dicarbonate de diméthyle, DMDC",Toxique,4
+E265,"Acide déhydroacétique, Acide déhydracétique",Toxique,4
+E266,Déhydroacétate de sodium,Toxique,4
+E310,Gallate de propyle,Toxique,4
+E319,"Butylhydroquinone tertiaire, BHQT",Toxique,4
+E324,Ethoxyquine,Toxique,4
+E342,"Phosphates d'ammonium, Monophosphates d'ammonium",Toxique,4
+E384,Citrates d'isopropyle,Toxique,4
+E385,EDTA calcio-disodique,Toxique,4
+E386,EDTA disodique,Toxique,4
+E407,"Carraghénane, Carraghénate, Furcellaran, Mousse d'Irlande",Toxique,4
+E407a,"Carraghénane semi-raffinée, Algue Eucheuma transformée",Toxique,4
+E430,Stéarate de polyoxyéthylène 8,Toxique,4
+E431,Stéarate de polyoxyéthylène 40,Toxique,4
+E432,"Polysorbate 20, Tween 20",Toxique,4
+E433,"Polysorbate 80, Tween 80",Toxique,4
+E434,"Polysorbate 40, Tween 40",Toxique,4
+E435,"Polysorbate 60, Tween 60",Toxique,4
+E436,"Polysorbate 65, Tween 65",Toxique,4
+E457,"Cyclodextrine (Alpha-), AlphaCD, ?-Cyclodextrine",Toxique,4
+E458,"Cyclodextrine (Gamma-), GammaCD, ?-Cyclodextrine",Toxique,4
+E460,Celluloses,Toxique,4
+E466,"Carboxyméthyl cellulose de sodium, Gomme de cellulose",Toxique,4
+E477,Esters de propylène glycol d'acides gras,Toxique,4
+E478,Esters glycériques et propylène-glycoliques d'acides gras lactyles,Toxique,4
+E479b,Huile de soja oxydée par chauffage,Toxique,4
+E487,"Laurylsulfate de sodium, LSS",Toxique,4
+E517,Sulfate d'ammonium,Toxique,4
+E519,"Sulfate de cuivre II, Sulfate cuprique",Toxique,4
+E520,Sulfate d'aluminium (anhydre),Toxique,4
+E521,Sulfate d'aluminium sodique,Toxique,4
+E522,Sulfate d'aluminium potassique,Toxique,4
+E539,Thiosulfate de sodium,Toxique,4
+E541,Phosphate de sodium-aluminium,Toxique,4
+E545,Polyphosphates d'ammonium,Toxique,4
+E554,"Silicate alumino-sodique, Silicoaluminate de sodium",Toxique,4
+E555,"Silicate alumino-potassique, Silocoaluminate de potassium",Toxique,4
+E556,"Silicate alumino-calcique, Silicoaluminate de calcium",Toxique,4
+E586,Hexylrésorcinol (4-),Toxique,4
+E620,Acide glutamique,Toxique,4
+E621,"Glutamate de sodium, Glutamate monosodique, GMS",Toxique,4
+E622,"Glutamate de potassium, Glutamate monopotassique",Toxique,4
+E623,"Glutamate de calcium, Diglutamate monocalcique",Toxique,4
+E625,"Glutamate de magnésium, Diglutamate monomagnésique",Toxique,4
+E900,"Diméthylpolysiloxane, Polydiméthylsiloxane, Diméthicone, PDMS",Toxique,4
+E900b,"Méthylphénylpolysiloxane, Polyphénylméthylsiloxane, Phényl triméthicone",Toxique,4
+E905e,"Huile minérale (viscosité moyenne et faible, catégorie I)",Toxique,4
+E907,"Poly-1-décène hydrogéné, Polydécène hydrogéné",Toxique,4
+E919,Chlorure de nitrosyle,Toxique,4
+E923,Persulfate d'ammonium,Toxique,4
+E925,"Chlore, Chlorine",Toxique,4
+E926,"Peroxyde de chlore, Dioxyde de chlore, Oxyde de chlore",Toxique,4
+E928,Peroxyde de benzoyle,Toxique,4
+E929,Peroxyde d'acétone,Toxique,4
+E940,Dichlorodifluorométhane,Toxique,4
+E950,"Acésulfame potassium, Acésulfame-K",Toxique,4
+E951,Aspartame,Toxique,4
+E952,Cyclamates,Toxique,4
+E954,"Saccharine et ses sels de Na, Ca et K",Toxique,4
+E961,Néotame,Toxique,4
+E1203,Alcool polyvinylique,Toxique,4
+E1421,"Amidon acétylé à l'acétate de vinyle, dit Amidon modifié",Toxique,4
+E1440,"Amidon hydroxypropylique, dit Amidon modifié",Toxique,4
+E1441,"Glycérine de diamidon hydroxypropylique, dit Amidon modifié",Toxique,4
+E1442,"Phosphate de diamidon hydroxypropylique, dit Amidon modifié",Toxique,4
+E1452,"Succinate octénylique d'amidon aluminique, dit Amidon modifié",Toxique,4
+E1521,"Polyéthylène glycol, Macrogol, PEG",Toxique,4
+E104,"Jaune de quinoléine, Jaune de quinoline",Très toxique,5
+E105,Jaune solide,Très toxique,5
+E110,"Jaune orangé S, Jaune soleil FCF",Très toxique,5
+E111,"Orange GGN, Alpha-naphthol orange",Très toxique,5
+E121,"Rouge citrus no. 2 (ex- Orseille, Orcéine)",Très toxique,5
+E122,"Azorubine, Carmoisine",Très toxique,5
+E123,"Amarante, Amaranthe",Très toxique,5
+E124,"Ponceau 4R, Rouge cochenille A",Très toxique,5
+E125,"Ponceau SX, Ecarlate GN, Scarlet GN",Très toxique,5
+E126,Ponceau 6R,Très toxique,5
+E127,Erythrosine,Très toxique,5
+E128,"Rouge 2G, Azogéranine",Très toxique,5
+E129,Rouge allura AC,Très toxique,5
+E130,"Bleu anthraquinonique, Bleu solanthrène RS",Très toxique,5
+E132,"Indigotine, Carmin(e) d'indigo",Très toxique,5
+E133,Bleu brillant FCF,Très toxique,5
+E142,"Vert S, Vert brillant BS, Vert lissamine",Très toxique,5
+E143,Vert solide FCF,Très toxique,5
+E150d,Caramel IV - procédé à l'ammoniaque sulfite,Très toxique,5
+E151,"Noir brillant BN, Noir PN, Naphtol black",Très toxique,5
+E154,Brun FK,Très toxique,5
+E155,"Brun HT, Brun chocolat HT",Très toxique,5
+E216,"Propylparabène, Hydroxybenzoate de propyle (para-)",Très toxique,5
+E217,"Propylparabène sodique, Hydroxybenzoate de propyle sodique (para-)",Très toxique,5
+E239,Héxaméthylène tétramine,Très toxique,5
+E240,"Formaldéhyde, Aldéhyde formique, Formol",Très toxique,5
+E249,Nitrite de potassium,Très toxique,5
+E250,Nitrite de sodium,Très toxique,5
+E251,"Nitrate de sodium, Salpêtre du Chili",Très toxique,5
+E252,"Nitrate de potassium, Salpêtre",Très toxique,5
+E284,Acide borique,Très toxique,5
+E285,Tétraborate de sodium (Borax),Très toxique,5
+E320,"Butylhydroxyanisol, Hydroxyanisol butylé, BHA",Très toxique,5
+E321,"Butylhydroxytoluène, Hydroxytoluène butylé, BHT",Très toxique,5
+E443,Huile végétale bromée,Très toxique,5
+E488,Mono et diglycérides éthoxylés,Très toxique,5
+E523,"Sulfate d'aluminium ammonique, Sulfate d'aluminium ammonium",Très toxique,5
+E624,"Glutamate d'ammonium, Glutamate monoammonique",Très toxique,5
+E905f,"Huile minérale (viscosité moyenne et faible, catégorie II)",Très toxique,5
+E905g,"Huile minérale (viscosité moyenne et faible, catégorie III)",Très toxique,5
+E924a,Bromate de potassium,Très toxique,5
+E924b,Bromate de calcium,Très toxique,5
+E962,Aspartame acésulfame (sel d'),Très toxique,5

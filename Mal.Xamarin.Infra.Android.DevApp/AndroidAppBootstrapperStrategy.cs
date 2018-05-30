@@ -2,6 +2,7 @@
 using Mal.Xamarin.Infra.Android.DevApp.BrugerMenu;
 using Mal.Xamarin.Infra.Android.DevApp.CollapsibleHeader;
 using Mal.Xamarin.Infra.Android.DevApp.LazyList;
+using Mal.Xamarin.Infra.Android.DevApp.OpenFoodFacts;
 using Mal.Xamarin.Infra.Containers;
 using Mal.Xamarin.Infra.DevApp;
 using Mal.Xamarin.Infra.DevApp.ViewModels.BurgerMenu;
@@ -26,6 +27,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
             container.RegisterActivityForNavigation<CollapsibleHeaderActivity, CollapsibleHeaderToken>();
 
             container.ServiceLocator.GetInstance<IServiceRegister<INavigationToken>>().Register(new CollapsibleHeaderToken());
+
+            container.RegisterType<OpenFoodFactsBootstrapper>();
+            container.ServiceLocator.GetInstance<OpenFoodFactsBootstrapper>().Run();
         }
     }
 }
