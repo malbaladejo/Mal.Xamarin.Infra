@@ -101,6 +101,7 @@
     <Compile Include="Fonts\IconFontHelper.cs" />
     <Compile Include="Adapters\ListViewAdapter.cs" />
     <Compile Include="Navigation\AndroidNavigationService.cs" />
+    <Compile Include="Navigation\IAndroidNavigationService.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IconTextView.cs" />

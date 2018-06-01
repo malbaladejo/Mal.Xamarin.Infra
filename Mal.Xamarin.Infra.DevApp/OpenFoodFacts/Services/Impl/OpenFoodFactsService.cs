@@ -1,5 +1,6 @@
 ﻿using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Impl.Dtos;
 using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Impl.Mappers;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -19,12 +20,21 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Impl
 
         public async Task<Product> GetProductAsync(string productCode)
         {
+            var root = await this.GatDataAsync<RootProduct>(new Uri(GetFormatedUrl(productCode), UriKind.Absolute));
+            return this.mapper.MapProduct(root);
+        }
+
+        private async Task<T> GatDataAsync<T>(Uri uri) where T : ResponseBase
+        {
             using (var webClient = new WebClient())
             {
-                var json = await webClient.DownloadStringTaskAsync(new Uri(GetFormatedUrl(productCode), UriKind.Absolute));
-                var root = RootProduct.FromJson(json);
+                var json = await webClient.DownloadStringTaskAsync(uri);
+                var response = JsonConvert.DeserializeObject<T>(json, Converter.Settings);
 
-                return this.mapper.MapProduct(root);
+                if (response.Status == 0)
+                    throw new WebException(response.StatusVerbose);
+
+                return response;
             }
         }
 

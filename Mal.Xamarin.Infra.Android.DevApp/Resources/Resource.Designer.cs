@@ -1853,6 +1853,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			global::Mal.Xamarin.Infra.Android.Resource.Styleable.ViewStubCompat_android_id = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Styleable.ViewStubCompat_android_id;
 			global::Mal.Xamarin.Infra.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Mal.Xamarin.Infra.Android.Resource.Styleable.ViewStubCompat_android_layout = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Styleable.ViewStubCompat_android_layout;
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Mal.Xamarin.Infra.Android.DevApp.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Animation
@@ -4025,6 +4028,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f0800ae
 			public const int OpenFoodFactsManualProductSearch_ref = 2131230894;
 			
+			// aapt resource value: 0x7f0800b0
+			public const int OpenFoodFactsManualProductSearch_scan = 2131230896;
+			
 			// aapt resource value: 0x7f0800af
 			public const int OpenFoodFactsManualProductSearch_search = 2131230895;
 			
@@ -4169,6 +4175,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080082
 			public const int container = 2131230850;
 			
+			// aapt resource value: 0x7f0800b1
+			public const int contentFrame = 2131230897;
+			
 			// aapt resource value: 0x7f08004e
 			public const int contentPanel = 2131230798;
 			
@@ -4253,8 +4262,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080049
 			public const int icon = 2131230793;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int iconHamburger = 2131230898;
+			// aapt resource value: 0x7f0800b4
+			public const int iconHamburger = 2131230900;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int icon_group = 2131230888;
@@ -4322,23 +4331,23 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080096
 			public const int main_item_title = 2131230870;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int masked = 2131230897;
+			// aapt resource value: 0x7f0800b3
+			public const int masked = 2131230899;
 			
 			// aapt resource value: 0x7f08009d
 			public const int media_actions = 2131230877;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int menuItemBeer = 2131230902;
+			// aapt resource value: 0x7f0800b8
+			public const int menuItemBeer = 2131230904;
+			
+			// aapt resource value: 0x7f0800b7
+			public const int menuItemBugReporting = 2131230903;
 			
 			// aapt resource value: 0x7f0800b5
-			public const int menuItemBugReporting = 2131230901;
+			public const int menuItemSettingsicon = 2131230901;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int menuItemSettingsicon = 2131230899;
-			
-			// aapt resource value: 0x7f0800b4
-			public const int menuItemWebsite = 2131230900;
+			// aapt resource value: 0x7f0800b6
+			public const int menuItemWebsite = 2131230902;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -4562,8 +4571,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int visible = 2131230896;
+			// aapt resource value: 0x7f0800b2
+			public const int visible = 2131230898;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
@@ -4836,6 +4845,12 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			
 			// aapt resource value: 0x7f040046
 			public const int support_simple_spinner_dropdown_item = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int zxingscanneractivitylayout = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int zxingscannerfragmentlayout = 2130968648;
 			
 			static Layout()
 			{
