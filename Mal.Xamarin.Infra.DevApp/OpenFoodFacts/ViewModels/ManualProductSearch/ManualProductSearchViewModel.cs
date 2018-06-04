@@ -1,6 +1,9 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
 using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services;
+using Mal.Xamarin.Infra.DevApp.Translation;
+using Mal.Xamarin.Infra.Translation;
 using System;
 using System.Windows.Input;
 
@@ -9,36 +12,55 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
     public class ManualProductSearchViewModel : ViewModelBase
     {
         private readonly IOpenFoodFactsService openFoodFactsService;
+        private readonly IDialogService dialogService;
+        private readonly ITranslationService translationService;
         private string reference;
         private readonly RelayCommand searchCommand;
         private readonly RelayCommand scanCommand;
+        private bool isSearchInProgress;
+        private bool isScanInProgress;
 
-        public ManualProductSearchViewModel(IOpenFoodFactsService openFoodFactsService)
+        public ManualProductSearchViewModel(IOpenFoodFactsService openFoodFactsService, 
+            IDialogService dialogService,
+            ITranslationService translationService)
         {
             this.openFoodFactsService = openFoodFactsService;
+            this.dialogService = dialogService;
+            this.translationService = translationService;
             this.searchCommand = new RelayCommand(this.Search, this.CanSearch);
-            this.scanCommand = new RelayCommand(this.Scan);
+            this.scanCommand = new RelayCommand(this.Scan, this.CanScan);
         }
 
-        private bool CanSearch() => !string.IsNullOrWhiteSpace(this.reference);
+        private bool CanSearch() => !this.IsSearchInProgress && !string.IsNullOrWhiteSpace(this.reference);
 
         private async void Search()
         {
             try
             {
+                this.IsSearchInProgress = true;
                 var product = await this.openFoodFactsService.GetProductAsync(this.reference);
+                this.IsSearchInProgress = false;
             }
             catch (Exception e)
             {
-
+                this.IsSearchInProgress = false;
+                this.dialogService.ShowError(e,
+                    this.translationService.GetTranslation(ResourceKeys.Error),
+                    this.translationService.GetTranslation(ResourceKeys.OK), () => { });                    
+            }
+            finally
+            {
+                this.IsSearchInProgress = false;
             }
         }
+
+        private bool CanScan() => !this.IsScanInProgress;
 
         private async void Scan()
         {
             try
             {
-
+                this.IsScanInProgress = true;
                 var scanner = new ZXing.Mobile.MobileBarcodeScanner();
                 scanner.CancelButtonText = "cancel";
                 scanner.BottomText = "en bas";
@@ -52,9 +74,16 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
                 this.Reference = result.Text;
                 this.Search();
             }
-            catch
+            catch(Exception e)
             {
-
+                this.IsScanInProgress = false;
+                await this.dialogService.ShowError(e,
+                    this.translationService.GetTranslation(ResourceKeys.Error),
+                    this.translationService.GetTranslation(ResourceKeys.OK), () => { });
+            }
+            finally
+            {
+                this.IsScanInProgress = false;
             }
         }
 
@@ -70,5 +99,23 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
 
         public ICommand SearchCommand => this.searchCommand;
         public ICommand ScanCommand => this.scanCommand;
+
+        public bool IsSearchInProgress
+        {
+            get { return this.isSearchInProgress; }
+            set {
+                if (this.Set(ref this.isSearchInProgress, value))
+                    this.searchCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        public bool IsScanInProgress
+        {
+            get { return this.isScanInProgress; }
+            set {
+                if (this.Set(ref this.isScanInProgress, value))
+                    this.scanCommand.RaiseCanExecuteChanged();
+            }
+        }
     }
 }

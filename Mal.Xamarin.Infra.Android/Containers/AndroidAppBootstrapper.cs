@@ -18,7 +18,7 @@ namespace Mal.Xamarin.Infra.Android.Containers
             var navigationService = new AndroidNavigationService();
             container.RegisterInstance<INavigationService>(navigationService);
             container.RegisterInstance<IAndroidNavigationService>(navigationService);
-
+            container.RegisterSingleton<IDialogService, AndroidDialogService>();
             return this.container;
         }
     }
