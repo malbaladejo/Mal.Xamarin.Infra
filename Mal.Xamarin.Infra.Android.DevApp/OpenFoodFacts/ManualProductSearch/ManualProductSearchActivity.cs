@@ -1,15 +1,13 @@
 ﻿using Android.App;
 using Android.Content.PM;
-using Android.Graphics;
-using Android.Media;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
+using Mal.Xamarin.Infra.Android.Converters;
 using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch;
-using ZXing;
 using ZXing.Mobile;
-
+using AndroidViews = Android.Views;
 namespace Mal.Xamarin.Infra.Android.DevApp.OpenFoodFacts.ManualSearch
 {
     [Activity(Label = "Search")]
@@ -32,24 +30,29 @@ namespace Mal.Xamarin.Infra.Android.DevApp.OpenFoodFacts.ManualSearch
             this.SearchButton.SetCommand(nameof(Button.Click), this.DataContext.SearchCommand);
             this.ScanButton.SetCommand(nameof(Button.Click), this.DataContext.ScanCommand);
 
-            MobileBarcodeScanner.Initialize(Application);
+            var progressBarBinding = this.DataContext.SetBinding<bool, AndroidViews.ViewStates>(nameof(this.DataContext.IsSearchInProgress),
+                                        this.ProgressBar, nameof(this.ProgressBar.Visibility));
+            progressBarBinding.ConvertSourceToTarget(BoolToViewStatesConverter.TrueToVisibleInstance.Convert);
 
-            //var reader = new BarcodeReader();
-            //// load a bitmap
-            //var barcodeBitmap = (Bitmap)Image.LoadFrom("C:\\sample-barcode-image.png");
-            //// detect and decode the barcode inside the bitmap
-            //var result = reader.Decode(barcodeBitmap);
-            //// do something with the result
-            //if (result != null)
-            //{
-            //    txtDecoderType.Text = result.BarcodeFormat.ToString();
-            //    txtDecoderContent.Text = result.Text;
-            //}
-        }
+            this.DataContext.SetBinding<string, string>(nameof(this.DataContext.ProductName),
+                this.ProductName, nameof(TextView.Text));
+
+            this.DataContext.SetBinding<string, string>(nameof(this.DataContext.ProductBrand),
+                this.ProductBrand, nameof(TextView.Text));
+
+            this.DataContext.SetBinding<string, string>(nameof(this.DataContext.ProductNutriScore),
+                this.NutriScore, nameof(TextView.Text));
+
+            MobileBarcodeScanner.Initialize(Application);
+        }       
 
         private EditText Reference => this.bootstrapper.GetView<EditText>(Resource.Id.OpenFoodFactsManualProductSearch_ref);
         private Button SearchButton => this.bootstrapper.GetView<Button>(Resource.Id.OpenFoodFactsManualProductSearch_search);
         private Button ScanButton => this.bootstrapper.GetView<Button>(Resource.Id.OpenFoodFactsManualProductSearch_scan);
+        private ProgressBar ProgressBar => this.bootstrapper.GetView<ProgressBar>(Resource.Id.OpenFoodFactsManualProductSearch_busyindicator);
+        private TextView ProductName => this.bootstrapper.GetView<TextView>(Resource.Id.OpenFoodFactsManualProductSearch_productName);
+        private TextView ProductBrand => this.bootstrapper.GetView<TextView>(Resource.Id.OpenFoodFactsManualProductSearch_productBrand);
+        private TextView NutriScore => this.bootstrapper.GetView<TextView>(Resource.Id.OpenFoodFactsManualProductSearch_nutriScore);
 
         private ManualProductSearchViewModel DataContext { get; set; }
 

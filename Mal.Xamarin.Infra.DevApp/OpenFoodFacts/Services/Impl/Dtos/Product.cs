@@ -258,7 +258,7 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Impl.Dtos
         public object[] IngredientsFromPalmOilTags { get; set; }
 
         [JsonProperty("additives_tags")]
-        public object[] AdditivesTags { get; set; }
+        public string[] AdditivesTags { get; set; }
 
         [JsonProperty("misc_tags")]
         public string[] MiscTags { get; set; }

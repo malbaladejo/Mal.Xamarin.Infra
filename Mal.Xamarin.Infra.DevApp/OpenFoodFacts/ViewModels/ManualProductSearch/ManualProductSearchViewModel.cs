@@ -2,9 +2,11 @@
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services;
+using Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Data;
 using Mal.Xamarin.Infra.DevApp.Translation;
 using Mal.Xamarin.Infra.Translation;
 using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 
 namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
@@ -19,10 +21,11 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
         private readonly RelayCommand scanCommand;
         private bool isSearchInProgress;
         private bool isScanInProgress;
+        private Product product;
 
-        public ManualProductSearchViewModel(IOpenFoodFactsService openFoodFactsService, 
-            IDialogService dialogService,
-            ITranslationService translationService)
+        public ManualProductSearchViewModel(IOpenFoodFactsService openFoodFactsService,
+                                            IDialogService dialogService,
+                                            ITranslationService translationService)
         {
             this.openFoodFactsService = openFoodFactsService;
             this.dialogService = dialogService;
@@ -38,7 +41,7 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
             try
             {
                 this.IsSearchInProgress = true;
-                var product = await this.openFoodFactsService.GetProductAsync(this.reference);
+                this.Product = await this.openFoodFactsService.GetProductAsync(this.reference);
                 this.IsSearchInProgress = false;
             }
             catch (Exception e)
@@ -46,7 +49,7 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
                 this.IsSearchInProgress = false;
                 this.dialogService.ShowError(e,
                     this.translationService.GetTranslation(ResourceKeys.Error),
-                    this.translationService.GetTranslation(ResourceKeys.OK), () => { });                    
+                    this.translationService.GetTranslation(ResourceKeys.OK), () => { });
             }
             finally
             {
@@ -74,7 +77,7 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
                 this.Reference = result.Text;
                 this.Search();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 this.IsScanInProgress = false;
                 await this.dialogService.ShowError(e,
@@ -103,7 +106,8 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
         public bool IsSearchInProgress
         {
             get { return this.isSearchInProgress; }
-            set {
+            set
+            {
                 if (this.Set(ref this.isSearchInProgress, value))
                     this.searchCommand.RaiseCanExecuteChanged();
             }
@@ -112,10 +116,32 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.ViewModels.ManualProductSearch
         public bool IsScanInProgress
         {
             get { return this.isScanInProgress; }
-            set {
+            set
+            {
                 if (this.Set(ref this.isScanInProgress, value))
                     this.scanCommand.RaiseCanExecuteChanged();
             }
         }
+
+        private Product Product
+        {
+            get { return this.product; }
+             set {
+                if (!this.Set(ref this.product, value))
+                    return;
+
+                this.RaisePropertyChanged(nameof(this.ProductName));
+                this.RaisePropertyChanged(nameof(this.ProductBrand));
+                this.RaisePropertyChanged(nameof(this.ProductNutriScore));
+                this.RaisePropertyChanged(nameof(this.ProductPictureUrl));
+                this.RaisePropertyChanged(nameof(this.ProductAdditives));
+            }
+        }
+
+        public string ProductName => this.Product?.Name;
+        public string ProductBrand => this.Product?.Brand;
+        public string ProductNutriScore => this.Product?.NutriScore;
+        public string ProductPictureUrl => this.Product?.PictureUrl;
+        public IReadOnlyCollection<Additive> ProductAdditives => this.Product?.Additives ?? new Additive[0];
     }
 }

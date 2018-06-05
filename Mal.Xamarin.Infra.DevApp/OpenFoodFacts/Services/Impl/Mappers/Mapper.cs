@@ -12,9 +12,11 @@ namespace Mal.Xamarin.Infra.DevApp.OpenFoodFacts.Services.Impl.Mappers
         public LocalProduct MapProduct(RootProduct rootProduct)
         {
             return new LocalProduct(rootProduct.Code,
+                                    rootProduct.Product.ProductNameFr,
+                                    rootProduct.Product.Brands,
                                     rootProduct.Product.NutritionGrades,
                                     rootProduct.Product.ImageFrontThumbUrl,
-                                    this.Map(rootProduct.Product.AdditivesOriginalTags, this.MapAdditive));
+                                    this.Map(rootProduct.Product.AdditivesTags, this.MapAdditive));
         }
 
         private IReadOnlyCollection<TTarget> Map<TSource, TTarget>(IReadOnlyCollection<TSource> sources, Func<TSource, TTarget> mapItem)

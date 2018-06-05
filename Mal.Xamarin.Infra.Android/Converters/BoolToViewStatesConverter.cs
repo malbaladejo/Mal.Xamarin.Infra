@@ -20,7 +20,7 @@ namespace Mal.Xamarin.Infra.Android.Converters
 
         public ViewStates Convert(bool value)
         {
-            return (inverse ? !value : value) ? ViewStates.Visible : ViewStates.Invisible;
+            return (inverse ? !value : value) ? ViewStates.Visible : ViewStates.Gone;
         }
     }
 }

@@ -4025,6 +4025,18 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0800b1
+			public const int OpenFoodFactsManualProductSearch_busyindicator = 2131230897;
+			
+			// aapt resource value: 0x7f0800b5
+			public const int OpenFoodFactsManualProductSearch_nutriScore = 2131230901;
+			
+			// aapt resource value: 0x7f0800b4
+			public const int OpenFoodFactsManualProductSearch_productBrand = 2131230900;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int OpenFoodFactsManualProductSearch_productName = 2131230899;
+			
 			// aapt resource value: 0x7f0800ae
 			public const int OpenFoodFactsManualProductSearch_ref = 2131230894;
 			
@@ -4139,6 +4151,9 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f08009b
 			public const int cancel_action = 2131230875;
 			
+			// aapt resource value: 0x7f0800b2
+			public const int card_view = 2131230898;
+			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
 			
@@ -4175,8 +4190,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080082
 			public const int container = 2131230850;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int contentFrame = 2131230897;
+			// aapt resource value: 0x7f0800b6
+			public const int contentFrame = 2131230902;
 			
 			// aapt resource value: 0x7f08004e
 			public const int contentPanel = 2131230798;
@@ -4262,8 +4277,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080049
 			public const int icon = 2131230793;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int iconHamburger = 2131230900;
+			// aapt resource value: 0x7f0800b9
+			public const int iconHamburger = 2131230905;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int icon_group = 2131230888;
@@ -4331,23 +4346,23 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f080096
 			public const int main_item_title = 2131230870;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int masked = 2131230899;
+			// aapt resource value: 0x7f0800b8
+			public const int masked = 2131230904;
 			
 			// aapt resource value: 0x7f08009d
 			public const int media_actions = 2131230877;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int menuItemBeer = 2131230904;
+			// aapt resource value: 0x7f0800bd
+			public const int menuItemBeer = 2131230909;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int menuItemBugReporting = 2131230903;
+			// aapt resource value: 0x7f0800bc
+			public const int menuItemBugReporting = 2131230908;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int menuItemSettingsicon = 2131230901;
+			// aapt resource value: 0x7f0800ba
+			public const int menuItemSettingsicon = 2131230906;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int menuItemWebsite = 2131230902;
+			// aapt resource value: 0x7f0800bb
+			public const int menuItemWebsite = 2131230907;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -4571,8 +4586,8 @@ namespace Mal.Xamarin.Infra.Android.DevApp
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int visible = 2131230898;
+			// aapt resource value: 0x7f0800b7
+			public const int visible = 2131230903;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
